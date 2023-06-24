@@ -7,8 +7,8 @@
         <input matInput [(ngModel)]="num2" type="number" placeholder="Numero1">
     </mat-form-field>
     <mat-radio-group name="opciones" [(ngModel)]="operacionSeleccionada">
-        <mat-radio-button *ngFor="let op of tipoOperaciones" [value]="op" name="opciones" style="margin:10px"> 
-            {{op}} 
+        <mat-radio-button *ngFor="let op of tipoOperaciones" [value]="op" name="opciones" style="margin:10px">
+            {{op}}
         </mat-radio-button>
     </mat-radio-group>
     <button mat-raised-button (click)="calcular()" color="primary">Calcular</button>
