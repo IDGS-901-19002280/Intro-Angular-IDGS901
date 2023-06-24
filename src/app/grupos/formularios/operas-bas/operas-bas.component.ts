@@ -20,7 +20,10 @@ export class OperasBasComponent {
   calcular(){
     switch(this.operacionSeleccionada){
       case 'suma':this.resultado=this.num1+this.num2;
-                  break;
+      case 'res':this.resultado=this.num1-this.num2;
+      case 'multiplicacion':this.resultado=this.num1*this.num2;
+      case 'division':this.resultado=this.num1/this.num2;
+      break;
     }
   }
 }
