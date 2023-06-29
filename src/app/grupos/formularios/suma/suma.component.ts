@@ -6,12 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./suma.component.css']
 })
 export class SumaComponent {
-num1='';
-num2='';
-resultado?:number
+  num1 = ''
+  num2 = ''
+  resultado : number = 0
 
-sumar():void{
-  this.resultado=parseInt(this.num1)+parseInt(this.num2);
-}
+  sumar() : void {
+    this.resultado = parseInt(this.num1) + parseInt(this.num2)
+  }
 
 }

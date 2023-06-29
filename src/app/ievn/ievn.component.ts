@@ -1,25 +1,22 @@
-import { Component } from "@angular/core";
-
+import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-ievn',
-    template:`
-    <h1>IEVN</h1>
-    <div>
-      <b>Matricula: {{alumno.matricula}}</b></div>
-<div><b>Nombre: </b>{{alumno.nombre}}</div>
-<div><b>Edad: </b>{{alumno.edad}}</div>
-
+    selector : 'app-ievn',
+    template : `
+        <div class="container">
+            <h1>Alumnote de IEVN</h1>
+            <h3>{{alumno.nombre}}</h3>
+            <p><b>matricula: </b>{{alumno.matricula}}</p>
+            <p><b>edad: </b>{{alumno.edad}}</p>
+        </div>
     `
+
 })
 
-
 export class ievnComponent{
-    constructor(){}
-    alumno={
-        matricula:1234,
-        nombre:'Bernardo',
-        edad:22,
-      
-      };
+    alumno = {
+        nombre : 'Chabelo',
+        matricula : 19002274,
+        edad : 20
+    }
 }
