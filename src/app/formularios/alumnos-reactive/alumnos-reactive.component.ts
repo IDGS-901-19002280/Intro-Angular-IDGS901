@@ -15,6 +15,13 @@ export class AlumnosReactiveComponent {
     console.log('Form ->', this.alumnoForm.value)
   }
 
+  obtenerDatos():void{
+    const mat=this.alumnoForm.get('matricula')?.value
+    console.log('matricula', mat)
+    const nom=this.alumnoForm.get('nombre')?.value
+    console.log('nombre', nom)
+  }
+
   initForm(): FormGroup {
     return this.fb.group({
       matricula: ['', [Validators.required, Validators.minLength(5)]],

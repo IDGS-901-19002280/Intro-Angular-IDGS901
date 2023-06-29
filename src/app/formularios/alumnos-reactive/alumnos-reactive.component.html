@@ -69,5 +69,26 @@
   </div>
   <div class="col-6">
     <h1>Registros</h1>
+    <div class="d-grid gap-2 col-4">
+      <table>
+        <thead>
+          <th>Nombre</th>
+          <th>Matricula</th>
+          <th>Edad</th>
+          <th>Coreo</th>
+          <th>Foto</th>
+          <th>Calificacion</th>
+        </thead>
+        <tbody>
+          <td>{{alumnoForm.get('matricula')?.value}}</td>
+          <td>{{alumnoForm.get('nombre')?.value}}</td>
+          <td>{{alumnoForm.get('edad')?.value}}</td>
+          <td>{{alumnoForm.get('correo')?.value}}</td>
+          <td>{{alumnoForm.get('foto')?.value}}</td>
+          <td>{{alumnoForm.get('calif')?.value}}</td>
+      </tbody>
+      </table>
+    </div>
+
   </div>
 </div>

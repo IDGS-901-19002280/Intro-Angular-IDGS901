@@ -13,6 +13,8 @@ import { IricComponent } from './grupos/iric/iric.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CalificacionAlumComponent } from './grupos/calificacion-alum/calificacion-alum.component';
 import { AlumnosReactiveComponent } from './formularios/alumnos-reactive/alumnos-reactive.component';
+import { HomeComponent } from './home/home.component';
+import { AppRoutingModule } from './app.routing.module';
 
 @NgModule({
   declarations: [
@@ -24,13 +26,15 @@ import { AlumnosReactiveComponent } from './formularios/alumnos-reactive/alumnos
     SumaComponent,
     IAlumnoFilterPipe,
     CalificacionAlumComponent,
-    AlumnosReactiveComponent
+    AlumnosReactiveComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     OperasModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
