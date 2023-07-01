@@ -1,11 +1,12 @@
-
 thead{
-    color: purple;
+  color: rgb(8, 2, 95);
 }
+
 .btn-primary{
-    background-color: blueviolet;
+  background-color: rgb(8, 2, 95);
 }
+
 .card-header{
-    background-color: blueviolet;
-    color: white;
+  background-color:rgb(8, 2, 95);
+  color: white;
 }

@@ -6,24 +6,31 @@ import { Component } from '@angular/core';
   styleUrls: ['./operas-bas.component.css']
 })
 export class OperasBasComponent {
-  num1!:number;
-  num2!:number;
-  resultado!:number;
-  operacionSeleccionada:string='suma';
-  tipoOperaciones=[
-    'suma',
-    'res',
-    'multiplicacion',
-    'division',
-  ];
-
+  //signo de exclamacion para que no sea inicializado
+ num1!:number;
+ num2!:number;
+ resultado!:number;
+ operacionSeleccionada:string='suma';
+ tipoOperaciones=[
+'suma',
+'resta',
+'multiplicación',
+'division'
+];
   calcular(){
     switch(this.operacionSeleccionada){
-      case 'suma' :this.resultado=this.num1+this.num2;
-      case 'res' :this.resultado=this.num1-this.num2;
-      case 'multiplicacion' :this.resultado=this.num1*this.num2;
-      case 'division' :this.resultado=this.num1/this.num2;
+      case 'suma':
+        this.resultado=this.num1+this.num2;
       break;
+      case 'resta':
+          this.resultado=this.num1-this.num2;
+      break;
+      case 'multiplicación':
+            this.resultado=this.num1*this.num2;
+      break;
+      case 'division':
+              this.resultado=this.num1/this.num2;
+        break;
     }
   }
 }

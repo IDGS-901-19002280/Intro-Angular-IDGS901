@@ -6,18 +6,16 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./calificacion-alum.component.css']
 })
 export class CalificacionAlumComponent {
-  @Input() califica!: number;
+   @Input() califica!:number;
 
-  @Output() calificaCLick: EventEmitter<string> = new EventEmitter();
-  puntosCal!: number;
+   @Output() calificaClick:EventEmitter<string>=new EventEmitter();
+   puntosCal!:number;
+   ngOnChanges():void{
+     this.puntosCal=this.califica*76/10;
+    }
+   onClick(){
+     this.calificaClick.emit(`Has calificado al alumno ${this.califica}`)
+    // this.puntosCal=this.califica*76/100;
+   }
 
-  ngOnChanges(): void {
-    this.puntosCal = this.califica * 75 / 10;
-    console.log(this.califica)
-    console.log(this.puntosCal);
-  }
-
-  onClick() {
-    this.calificaCLick.emit(`Has calificado al alumno ${this.califica}`);
-  }
 }

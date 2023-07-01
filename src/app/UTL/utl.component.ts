@@ -1,18 +1,18 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
-    selector:'app-utl',
-    template : `
-    <form>
-        <label for="nombre">Nombre:</label>
-        <input type="tel" id="nombre" placeholder="Nombre">
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-    `
+  selector: 'app-utl',
+  template: `
+  <form action="">
+    <label for="">Nombre:</label>
+    <input type="text">
+    <button class="btn btn-primary">Ingresa</button>
+  </form>
+  `
 })
 
 export class utlComponent{
-    constructor(){
-        
-    }
+  constructor(){
+
+  }
 }

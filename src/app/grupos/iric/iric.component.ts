@@ -1,5 +1,5 @@
-import { Component } from "@angular/core";
-
+import { Component } from '@angular/core';
+import { IAlumnosIric } from '../alumnos-iric';
 
 @Component({
   selector: 'app-iric',
@@ -7,52 +7,43 @@ import { Component } from "@angular/core";
   styleUrls: ['./iric.component.css']
 })
 export class IricComponent {
+  imageWidth:number=50;
+  imageMargin:number=2;
+  muestraImg:boolean=true;
+  listFilter:string='';
+  alumnoTitle!:string;
 
-  imageWidth:number=100
-  imageMargin:number=2
-  muestraImg:boolean=true
-  listfilter?:string = ''
-  alumnoTitle! : string
-  
   showImage():void{
     this.muestraImg=!this.muestraImg;
   }
+alumnosIric:IAlumnosIric[]=[
+  {
+    matricula:19002280,
+    nombre:'Jesús',
+    edad:22,
+    correo: "jesusmendezalvarez9@gmail.com",
+    foto: "https://images.unsplash.com/photo-1635107510862-53886e926b74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80",
+    calif: 6.2
+},
+{
+  matricula:14522456,
+  nombre:'Adolf Hitler',
+  edad: 30,
+  correo: "AdolfitoHitler@hotmail.com",
+  foto: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Adolf_Hitler_cropped_restored.jpg/220px-Adolf_Hitler_cropped_restored.jpg",
+  calif: 10
+},
+{
+  matricula:69696969,
+  nombre:'Alex',
+  edad: 27,
+  correo: "alexmar@hotmail.com",
+  foto: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNlZ0Ewh-tc1Jt-xwlqZAvf0ZW2HuVL4qZdxthC-0ZOq0lzNoYa894JXC5d_anmurDrHg&usqp=CAU",
+  calif: 8
+}
+]
 
-  alumnosIric:any[]=[
-    {
-      
-        matricula:12344,
-        nombre:'Zamora',
-        edad:8,
-        correo:"Zamora@gmail.com",
-        foto:"https://c.pxhere.com/photos/fb/0a/child_smile_happy_infante_small_face_son_brother-646105.jpg!d",
-        calificacion : 3.7
-    },
-    {
-      
-      matricula:222425,
-      nombre:'Luna',
-      edad:23,
-      correo:"Luna@gmail.com",
-      foto:"https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
-      calificacion : 9.7
-    }
-    ,
-    {
-      
-      matricula:12345,
-      nombre:'Marco',
-      edad:24,
-      correo:"Marco@gmail.com",
-      foto:'https://th.bing.com/th/id/R.5ce936c4a65660653ac3b674fc9f9a36?rik=L%2bIZ%2bOVxOexXXA&riu=http%3a%2f%2ftusimagenesde.com%2fwp-content%2fuploads%2f2014%2f09%2fimagenes-de-personas-1.jpg&ehk=hw2S4IJ5ETZkDn3Apryd8D%2bIZD%2bTl1GSq2pHiDWuquw%3d&risl=&pid=ImgRaw&r=0',
-      calificacion : 6.7
-    }
-  ]
-
-  onCalificaClick(message : string) {
-    this.alumnoTitle = `alumnos ${message}`
-  }
-  
-
-
+onCalificaClick(message:string){
+ this.alumnoTitle=`alumnos ${message}`;
+}
 }

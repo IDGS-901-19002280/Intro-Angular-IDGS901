@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-// import {faMugSaucer} from '@fontawesome/free-slid-svg-icons'
+/* import { faMugSaucer } from '@fontawesome/free-sild-svg-icons'; */
 
 @Component({
   selector: 'app-menu',
@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
-  
+/*  myIcon=faMugSaucer; */
+
 }

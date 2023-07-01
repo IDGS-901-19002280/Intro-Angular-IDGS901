@@ -3,16 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { utlComponent } from './UTL/utl.component';
-import { ievnComponent } from './ievn/ievn.component';
+import { evnComponent } from './evn/evn.component';
+import { IricComponent } from './grupos/iric/iric.component';
 import { MenuComponent } from './grupos/menu/menu.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SumaComponent } from './grupos/formularios/suma/suma.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OperasModule } from './grupos/formularios/operas/operas.module';
-import { IAlumnoFilterPipe } from './grupos/alumno-filter.pipe';
-import { IricComponent } from './grupos/iric/iric.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AlumnosFilterPipe } from './grupos/alumnos-filter.pipe';
 import { CalificacionAlumComponent } from './grupos/calificacion-alum/calificacion-alum.component';
-import { AlumnosReactiveComponent } from './formularios/alumnos-reactive/alumnos-reactive.component';
+import { AlumnoReactiveComponent } from './formularios/alumno-reactive/alumno-reactive.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app.routing.module';
 
@@ -20,19 +20,20 @@ import { AppRoutingModule } from './app.routing.module';
   declarations: [
     AppComponent,
     utlComponent,
+    evnComponent,
     IricComponent,
-    ievnComponent,
     MenuComponent,
     SumaComponent,
-    IAlumnoFilterPipe,
+    AlumnosFilterPipe,
     CalificacionAlumComponent,
-    AlumnosReactiveComponent,
+    AlumnoReactiveComponent,
     HomeComponent
   ],
   imports: [
     BrowserModule,
-    OperasModule,
     FormsModule,
+    BrowserAnimationsModule,
+    OperasModule,
     ReactiveFormsModule,
     AppRoutingModule
   ],
